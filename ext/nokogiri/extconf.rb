@@ -231,7 +231,7 @@ when windows_p
   dir_config('zlib', idir, ldir)
   dir_config('xml2', [File.join(idir, "libxml2"), idir], ldir)
   dir_config('xslt', idir, ldir)
-when arg_config('--use-system-libraries', !!ENV['NOKOGIRI_USE_SYSTEM_LIBRARIES'])
+when arg_config('--use-system-libraries')
   message! "Building nokogiri using system libraries.\n"
 
   dir_config('zlib')
